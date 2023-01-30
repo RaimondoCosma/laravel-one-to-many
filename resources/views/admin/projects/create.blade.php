@@ -39,6 +39,19 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="type_id" class="form-label">Seleziona tipologia</label>
+                <select type="file" class="form-select @error('type_id') is-invalid @enderror" id="type_id"
+                    name="type_id" value="{{ old('type_id') }}">
+                    <option value="">Nessuna Tipologia</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+                @error('type_id')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
             <button type="submit" class="btn btn-primary">Crea</button>
         </form>
     </section>
