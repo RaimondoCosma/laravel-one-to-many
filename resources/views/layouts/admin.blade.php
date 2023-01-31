@@ -67,6 +67,13 @@
                                     Progetti
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    <i class="fa-brands fa-r-project fa-lg fa-fw"></i>
+                                    Tipologie
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
